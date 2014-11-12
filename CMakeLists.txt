@@ -119,6 +119,17 @@ endif(CMAKE_COMPILER_IS_GNUCXX)
 include_directories(Code)
 add_subdirectory(Code)
 
+#-----------------------------------------------------------------------------
+#We need ITK REVIEW headers
+if(NOT ITK_SOURCE_DIR)
+  message(SEND_ERROR "ITK_SOURCE_DIR not set! Please rerun cmake"
+    " or ccmake with option -D=<PathTOYourITKSourceRepo>")
+endif(NOT ITK_SOURCE_DIR)
+set(ITK_REVIEW_INCLUDE_DIR "${ITK_SOURCE_DIR}/Modules/Nonunit/Review/include")
+if(NOT EXISTS ${ITK_REVIEW_INCLUDE_DIR})
+  message(SEND_ERROR "Directory ${ITK_REVIEW_INCLUDE_DIR} does not exist! Can't fetch ITK REVIEW header files.")
+endif(NOT EXISTS ${ITK_REVIEW_INCLUDE_DIR})
+include_directories("${ITK_SOURCE_DIR}/Modules/Nonunit/Review/include")
 
 #-----------------------------------------------------------------------------
 #Build the matlab bindings if we have some

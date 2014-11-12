@@ -8,3 +8,7 @@ http://www.insight-journal.org/browse/publication/644
 
 The intent of this work is to upgrade to code base to be compatible with ITKv4.
 
+Installation
+============
+	$ ccmake . -DITK_DIR=../InsightToolkit-4.6.1/build/ -DITK_SOURCE_DIR=../InsightToolkit-4.6.1
+	$ make
