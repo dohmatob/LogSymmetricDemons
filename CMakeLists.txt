@@ -123,7 +123,7 @@ add_subdirectory(Code)
 #We need ITK REVIEW headers
 if(NOT ITK_SOURCE_DIR)
   message(SEND_ERROR "ITK_SOURCE_DIR not set! Please rerun cmake"
-    " or ccmake with option -D=<PathTOYourITKSourceRepo>")
+    " or ccmake with option -D=<AbsolutePathToYourITKSourceDir>")
 endif(NOT ITK_SOURCE_DIR)
 set(ITK_REVIEW_INCLUDE_DIR "${ITK_SOURCE_DIR}/Modules/Nonunit/Review/include")
 if(NOT EXISTS ${ITK_REVIEW_INCLUDE_DIR})

@@ -10,5 +10,5 @@ The intent of this work is to upgrade to code base to be compatible with ITKv4.
 
 Installation
 ============
-	$ ccmake . -DITK_DIR=<PathToYourITKBuildDir> -DITK_SOURCE_DIR=<PathToYourITKSourceDir>
+	$ ccmake . -DITK_DIR=<AbsolutePathToYourITKBuildDir> -DITK_SOURCE_DIR=<AbsolutePathToYourITKSourceDir>
 	$ make
